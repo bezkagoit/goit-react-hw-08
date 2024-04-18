@@ -3,17 +3,17 @@ import { ImPhone } from "react-icons/im";
 import { ImUser } from "react-icons/im";
 import css from "../Contact/Contact.module.css";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
+import { deleteContact } from "../../redux/contacts/operations";
 
 const Contact = ({ id, name, number }) => {
-  const dispatch = useDispatch(); // Отримуємо функцію dispatch з Redux
-
-  const handleDelete = () => {
-    dispatch(deleteContact(id)); // Викликаємо Redux action deleteContact з переданим id контакту
+  const dispatch = useDispatch();
+  const handleDelete = (id) => {
+    dispatch(deleteContact(id));
   };
+
   return (
     <li className={css.contactItem}>
-      <div>
+      <div className={css.paragraph}>
         <span className={css.contactName}>
           <ImUser />
           {name}
@@ -25,7 +25,7 @@ const Contact = ({ id, name, number }) => {
       </div>
       <button
         className={css.contactDeleteBtn}
-        onClick={handleDelete}
+        onClick={() => handleDelete(id)}
         type="button"
       >
         Delete

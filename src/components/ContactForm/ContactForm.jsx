@@ -3,8 +3,9 @@ import React from "react";
 import * as Yup from "yup";
 import css from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
-import { nanoid } from "nanoid";
+
+import { addContact } from "../../redux/contacts/operations";
+// import { nanoid } from "nanoid";
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
@@ -28,47 +29,44 @@ const ContactForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (formData, formActions) => {
-    const newContact = {
-      ...formData,
-      id: nanoid(),
-    };
-
-    dispatch(addContact(newContact));
+    dispatch(addContact(formData));
     formActions.resetForm();
   };
 
   return (
-    <Formik
-      validationSchema={ContactSchema}
-      initialValues={initialValues}
-      onSubmit={handleSubmit}
-    >
-      <Form className={css.contactForm}>
-        <div className={css.labelForm}>
-          <label>Name</label>
-          <Field
-            className={css.formField}
-            placeholder="Alex Mihalich"
-            type="text"
-            name="name"
-          />
-          <ErrorMessage name="name" component="div" />
-        </div>
-        <div className={css.labelForm}>
-          <label>Number</label>
-          <Field
-            className={css.formField}
-            placeholder="111-11-11"
-            type="text"
-            name="number"
-          />
-          <ErrorMessage name="number" component="div" />
-        </div>
-        <button className={css.buttonForm} type="submit">
-          Add contact
-        </button>
-      </Form>
-    </Formik>
+    <div className={css.containerForm}>
+      <Formik
+        validationSchema={ContactSchema}
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+      >
+        <Form className={css.contactForm}>
+          <div className={css.labelForm}>
+            <label>Name</label>
+            <Field
+              className={css.formField}
+              placeholder="Alex Mihalich"
+              type="text"
+              name="name"
+            />
+            <ErrorMessage name="name" component="div" />
+          </div>
+          <div className={css.labelForm}>
+            <label>Number</label>
+            <Field
+              className={css.formField}
+              placeholder="111-11-11"
+              type="text"
+              name="number"
+            />
+            <ErrorMessage name="number" component="div" />
+          </div>
+          <button className={css.buttonForm} type="submit">
+            Add contact
+          </button>
+        </Form>
+      </Formik>
+    </div>
   );
 };
 

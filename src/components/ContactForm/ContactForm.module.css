@@ -1,3 +1,9 @@
+.containerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .contactForm {
   border: 1px solid black;
   border-radius: 8px;

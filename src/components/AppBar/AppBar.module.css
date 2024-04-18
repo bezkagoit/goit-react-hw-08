@@ -1,0 +1,8 @@
+.nav {
+  position: relative;
+  background-color: #ab0520;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 16px;
+}

@@ -1,0 +1,27 @@
+.UserMenuName {
+  display: flex;
+}
+.userMenuText {
+  font-size: 20px;
+  color: #fff;
+}
+.spanUserName {
+  color: #0c234b;
+}
+.button {
+  display: inline-block;
+  color: #8b0015;
+  background-color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  white-space: normal;
+  border-width: 2px;
+  padding: 0.375rem 0.75rem;
+}
+.button:hover {
+  text-shadow: 0 5px 10px rgb(15, 14, 14);
+  transform: scale(1.1);
+  transition: all 250ms ease-in;
+}

@@ -1,0 +1,29 @@
+.authNavContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.headerLink {
+  display: inline-block;
+  color: #8b0015;
+  background-color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  white-space: normal;
+  border-width: 2px;
+  padding: 0.375rem 0.75rem;
+}
+.headerLink:hover {
+  text-shadow: 0 5px 10px rgb(15, 14, 14);
+  transform: scale(1.1);
+  transition: all 250ms ease-in;
+}
+
+.active {
+  color: #fff;
+  background-color: #ab0520;
+
+  box-shadow: 0 1px 1px #00000024, 0 1px 3px #0000001f, 0 2px 1px #0003;
+}
