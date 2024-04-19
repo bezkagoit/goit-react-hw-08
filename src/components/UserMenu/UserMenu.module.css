@@ -1,15 +1,22 @@
 .UserMenuName {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
+
 .userMenuText {
   font-size: 20px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
   color: #fff;
 }
 .spanUserName {
   color: #0c234b;
 }
-.button {
-  display: inline-block;
+
+.buttonLogOut {
   color: #8b0015;
   background-color: #fff;
   font-weight: 500;
@@ -20,8 +27,21 @@
   border-width: 2px;
   padding: 0.375rem 0.75rem;
 }
-.button:hover {
+
+.buttonLogOut:hover {
   text-shadow: 0 5px 10px rgb(15, 14, 14);
   transform: scale(1.1);
   transition: all 250ms ease-in;
+}
+
+@media screen and (min-width: 768px) {
+  .buttonLogOut {
+    font-size: 18px;
+    padding: 10px 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .UserMenuName {
+    gap: 15px;
+  }
 }

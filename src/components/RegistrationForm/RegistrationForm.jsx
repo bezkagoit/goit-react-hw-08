@@ -31,63 +31,69 @@ const RegistrationForm = ({ onRegister }) => {
   };
 
   return (
-    <Formik
-      validationSchema={UserRegisterSchema}
-      initialValues={INITIAL_FORM_DATA}
-      onSubmit={handleSubmit}
-    >
-      <Form className={css.form}>
-        <h2 className={css.formTitle}>Sign Up</h2>
+    <div className={css.registerForm}>
+      <Formik
+        validationSchema={UserRegisterSchema}
+        initialValues={INITIAL_FORM_DATA}
+        onSubmit={handleSubmit}
+      >
+        <Form className={css.form}>
+          <h2 className={css.formTitle}>Sign Up</h2>
 
-        <label className={css.label}>
-          <span className={css.labelText}>User name:</span>
-          <Field
-            className={css.formInput}
-            placeholder="Alex Mihalich"
-            type="text"
-            name="name"
-          />
-          <ErrorMessage className={css.errorMsg} name="name" component="span" />
-        </label>
-        <label className={css.label}>
-          <span className={css.labelText}>Email:</span>
-          <Field
-            className={css.formInput}
-            placeholder="alex@patron.com"
-            type="text"
-            name="email"
-          />
-          <ErrorMessage
-            className={css.errorMsg}
-            name="email"
-            component="span"
-          />
-        </label>
-        <label className={css.label}>
-          <span className={css.labelText}>Password:</span>
-          <Field
-            className={css.formInput}
-            placeholder="Enter your password"
-            type="password"
-            name="password"
-          />
-          <ErrorMessage
-            className={css.errorMsg}
-            name="password"
-            component="span"
-          />
-        </label>
+          <label className={css.label}>
+            <span className={css.labelText}>User name:</span>
+            <Field
+              className={css.formInput}
+              placeholder="Alex Mihalich"
+              type="text"
+              name="name"
+            />
+            <ErrorMessage
+              className={css.errorMsg}
+              name="name"
+              component="span"
+            />
+          </label>
+          <label className={css.label}>
+            <span className={css.labelText}>Email:</span>
+            <Field
+              className={css.formInput}
+              placeholder="alex@patron.com"
+              type="text"
+              name="email"
+            />
+            <ErrorMessage
+              className={css.errorMsg}
+              name="email"
+              component="span"
+            />
+          </label>
+          <label className={css.label}>
+            <span className={css.labelText}>Password:</span>
+            <Field
+              className={css.formInput}
+              placeholder="Enter your password"
+              type="password"
+              name="password"
+            />
+            <ErrorMessage
+              className={css.errorMsg}
+              name="password"
+              component="span"
+            />
+          </label>
 
-        <button
-          className={css.submitBtn}
-          type="submit"
-          title="Click to register user"
-          aria-label="Add new mailbox"
-        >
-          Sign Up <IoPersonAddSharp />
-        </button>
-      </Form>
-    </Formik>
+          <button
+            className={css.submitBtn}
+            type="submit"
+            title="Click to register user"
+            aria-label="Add new mailbox"
+          >
+            Sign Up <IoPersonAddSharp />
+          </button>
+        </Form>
+      </Formik>
+    </div>
   );
 };
 

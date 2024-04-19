@@ -12,14 +12,14 @@ const ContactList = () => {
         {Array.isArray(filteredContacts) &&
           filteredContacts.length > 0 &&
           filteredContacts.map((contact) => (
-            <div className={css.contactListItem}>
+            <li className={css.contactListItem}>
               <Contact
                 key={contact.id}
                 id={contact.id}
                 name={contact.name}
                 number={contact.number}
               />
-            </div>
+            </li>
           ))}
       </ul>
     </div>

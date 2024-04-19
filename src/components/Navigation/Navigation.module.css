@@ -1,6 +1,8 @@
 .navContainer {
   display: flex;
-  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .headerLink {
@@ -10,7 +12,7 @@
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.04em;
-  margin-bottom: 5px;
+  margin-right: 10px;
   padding: 7px 20px;
   text-transform: uppercase;
   text-decoration: none;
@@ -25,4 +27,11 @@
   color: #fff;
   background-color: #ab0520;
   box-shadow: 0 1px 1px #00000024, 0 1px 3px #0000001f, 0 2px 1px #0003;
+}
+
+@media screen and (min-width: 768px) {
+  .navContainer {
+    display: block;
+    margin-bottom: 0;
+  }
 }

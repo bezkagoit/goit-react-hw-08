@@ -12,14 +12,14 @@ const Contact = ({ id, name, number }) => {
   };
 
   return (
-    <li className={css.contactItem}>
+    <div className={css.contactItem}>
       <div className={css.paragraph}>
         <span className={css.contactName}>
-          <ImUser />
+          <ImUser className={css.iconContact} size="22" />
           {name}
         </span>
         <span className={css.contactNumber}>
-          <ImPhone />
+          <ImPhone className={css.iconContact} size="22" />
           {number}
         </span>
       </div>
@@ -30,7 +30,7 @@ const Contact = ({ id, name, number }) => {
       >
         Delete
       </button>
-    </li>
+    </div>
   );
 };
 

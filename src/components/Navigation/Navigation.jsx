@@ -14,18 +14,16 @@ const Navigation = () => {
     });
 
   return (
-    <header>
-      <nav className={css.navContainer}>
-        <NavLink className={getNavLinkClassNames} to="/">
-          Home
+    <nav className={css.navContainer}>
+      <NavLink className={getNavLinkClassNames} to="/">
+        Home
+      </NavLink>
+      {isSignedIn && (
+        <NavLink className={getNavLinkClassNames} to="/contacts">
+          Contacts
         </NavLink>
-        {isSignedIn && (
-          <NavLink className={getNavLinkClassNames} to="/contacts">
-            Contacts
-          </NavLink>
-        )}
-      </nav>
-    </header>
+      )}
+    </nav>
   );
 };
 

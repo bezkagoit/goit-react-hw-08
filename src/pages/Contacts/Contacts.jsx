@@ -19,10 +19,11 @@ const Contacts = () => {
   return (
     <div className={css.main}>
       <h2 className={css.title}>Phonebook</h2>
-
-      <ContactForm />
-      <SearchBox />
-      <ContactList />
+      <div className={css.positionContainer}>
+        <ContactForm />
+        <SearchBox />
+        <ContactList />
+      </div>
     </div>
   );
 };

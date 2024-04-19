@@ -14,9 +14,9 @@ const UserMenu = () => {
   return (
     <div className={css.UserMenuName}>
       <p className={css.userMenuText}>
-        Hello <span className={css.spanUserName}>{userName}!</span>
+        Hello, <span className={css.spanUserName}>{userName}!</span>
       </p>
-      <button className={css.button} type="button" onClick={onLogout}>
+      <button className={css.buttonLogOut} type="button" onClick={onLogout}>
         Sign out
       </button>
     </div>

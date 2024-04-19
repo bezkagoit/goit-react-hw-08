@@ -1,14 +1,32 @@
 .contactsList {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 12px;
-  border: 2px solid #000;
-  border-radius: 8px;
-  padding: 16px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .contactListItem {
-  width: calc((100% - 36px) / 4);
+  flex-basis: calc((100%) / 1);
+  border-radius: 5px;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .contactListItem {
+    flex-basis: calc((100% - 10px) / 2);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contactListItem {
+    flex-basis: calc((100% - 20px) / 3);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contactListItem {
+    flex-basis: calc((100% - 30px) / 4);
+  }
 }

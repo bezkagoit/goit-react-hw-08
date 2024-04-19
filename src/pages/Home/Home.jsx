@@ -4,10 +4,10 @@ import css from "./Home.module.css";
 
 const Home = () => {
   return (
-    <div>
-      <h1 className={css.title}>Phonebook</h1>
+    <div className={css.phonebookContainer}>
       <div className={css.container}>
         <div className={css.homeContainer}>
+          <h1 className={css.title}>Phonebook</h1>
           <span className={css.icon}>
             <MdContactPhone />
           </span>

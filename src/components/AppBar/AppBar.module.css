@@ -1,8 +1,37 @@
 .nav {
-  position: relative;
   background-color: #ab0520;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* padding: 10px; */
+  /* width: 100%; */
+
+  /* margin-top: 8px; */
+  position: relative;
+
   padding: 24px 16px;
 }
+/* 
+.navContainer {
+  padding: 10px 0;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0;
+    margin: 0;
+  }
+  .navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    padding: 20px 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+} */
